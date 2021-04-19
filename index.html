@@ -9,7 +9,27 @@
 
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#accordion").accordion(
+                {
+                    collapsible: true,
+                    active: false,
+                    heightStyle: 'content',
+                }
+            );
+
+        });
+    </script>
+    <script defer src="js/swiper-bundle.min.js"></script>
+    <script defer src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -60,6 +80,33 @@
         <div class="container">
             <section class="anim" id="anim">
                 <h2 class="title anim-title">Аниматоры</h2>
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            slide 1
+                        </div>
+                        <div class="swiper-slide">
+                            slide 2
+                        </div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">
+                            slide 1
+                        </div>
+                        <div class="swiper-slide">
+                            slide 2
+                        </div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+
+                </div>
             </section>
 
 
@@ -193,8 +240,48 @@
                 </div>
             </section>
 
+            <section class="gallery">
+                <h2 class="title gallery__title">Наши праздники</h2>
+            </section>
 
-
+            <section class="accordion">
+                <h2 class="title accordion__title">Часто задаваемые вопросы</h2>
+                <ul class="accordion__list" id="accordion">
+                    <li class="accordion__item">
+                        Вопрос 1
+                        <a href="#" class="link accordion-item__link">
+                            <button class="btn accordion-item__btn" aria-label="Показать больше"></button>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe vel voluptatibus unde iusto dolorum velit porro reprehenderit labore dolor? Quaerat molestiae quae accusamus esse dolore excepturi molestias laborum expedita illo.</p>
+                    </li>
+                    <li class="accordion__item">
+                        <a href="#" class="link accordion-item__link">
+                            <button class="btn accordion-item__btn"></button>
+                        </a>
+                    </li>
+                    <li class="accordion__item">
+                        <a href="#" class="link accordion-item__link">
+                            <button class="btn accordion-item__btn"></button>
+                        </a>
+                    </li>
+                    <li class="accordion__item">
+                        <a href="#" class="link accordion-item__link">
+                            
+                            <button class="btn accordion-item__btn"></button>
+                        </a>
+                    </li>
+                    <li class="accordion__item">
+                        <a href="#" class="link accordion-item__link">
+                            <button class="btn accordion-item__btn"></button>
+                        </a>
+                    </li>
+                    <li class="accordion__item">
+                        <a href="#" class="link accordion-item__link">
+                            <button class="btn accordion-item__btn"></button>
+                        </a>
+                    </li>
+                </ul>
+            </section>
 
 
         </div>
@@ -225,6 +312,9 @@
             </ul>
         </div>
     </footer>
+
+
+
 </body>
 
 </html>

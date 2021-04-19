@@ -254,6 +254,13 @@ body {
 
 .show-item:hover, .packs-item:hover {
     cursor: pointer;
+    transform: scale(1.02);
+    transition: transform ease-in-out 0.2s;
+}
+
+.show-item:hover .show-item__title {
+    transform: scale(1.03);
+    transition: transform ease-in-out 0.2s;
 }
 
 .show-item__title {
@@ -362,6 +369,20 @@ body {
     margin-right: 0;
 }
 
+.more__item:hover {
+    cursor: pointer;
+}
+
+.more__item:hover .more-item__img {
+    transform: scale(1.02);
+    transition: transform ease-in-out 0.2s;
+}
+
+.more__item:hover .more-item__name {
+    color: var(--blue);
+    transition: color ease-in-out 0.2s;
+}
+
 .more-item__img {
     width: 213px;
     height: 213px;
@@ -422,7 +443,6 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-
 }
 
 .about-us_img {
@@ -485,6 +505,7 @@ body {
     background: #fff;
     width: 400px;
 }
+
 .footer-logo__img {
     width: 400px;
 }
@@ -514,4 +535,9 @@ body {
     background-image: url(../img/footer/ig.svg);
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.swiper-container {
+    width: 600px;
+    height: 300px;
 }
