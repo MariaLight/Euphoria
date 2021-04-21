@@ -15,18 +15,7 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $(function () {
-            $("#accordion").accordion(
-                {
-                    collapsible: true,
-                    active: false,
-                    heightStyle: 'content',
-                }
-            );
 
-        });
-    </script>
     <script defer src="js/swiper-bundle.min.js"></script>
     <script defer src="js/main.js"></script>
 
@@ -67,47 +56,67 @@
         </div>
     </header>
 
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1 class="banner-title">Лучшие торжества в вашей жизни</h1>
+            <button class="btn banner-btn" id="banner-btn">Заказать праздник</button>
+        </div>
+    </section>
+
+
     <main class="main">
-        <section class="banner">
-            <div class="banner-content">
-                <h1 class="banner-title">Лучшие торжества в вашей жизни</h1>
-                <button class="btn banner-btn">Заказать праздник</button>
-            </div>
-        </section>
+        <section class="anim" id="anim">
+            <h2 class="title anim-title">Аниматоры</h2>
 
-
-
-        <div class="container">
-            <section class="anim" id="anim">
-                <h2 class="title anim-title">Аниматоры</h2>
-
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            slide 1
+            <div class="anim-container container">
+                <div class="anim-wrapper">
+                    <!-- Slides -->
+                    <div class="anim-slide burgerman">
+                        <div class="anim__minicard">
+                            <span class="anim__title">Burger Man из Fortnite</span>
                         </div>
-                        <div class="swiper-slide">
-                            slide 2
+                    </div>
+                    <div class="anim-slide ariel">
+                        <div class="anim__minicard">
+                            <span class="anim__title">Ариель</span>
                         </div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">
-                            slide 1
+                    </div>
+                    <div class="anim-slide minecraft">
+                        <div class="anim__minicard">
+                            <span class="anim__title">Minecraft</span>
                         </div>
-                        <div class="swiper-slide">
-                            slide 2
+                    </div>
+                    <div class="anim-slide lol">
+                        <div class="anim__minicard">
+                            <span class="anim__title">Кукла LOL</span>
                         </div>
-                        <div class="swiper-slide">Slide 3</div>
                     </div>
 
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-
+                    <div class="anim-slide burgerman">
+                        <div class="anim__minicard">
+                            <span class="anim__title">Burger Man из Fortnite</span>
+                        </div>
+                    </div>
+                    <div class="anim-slide lol">
+                        <div class="anim__minicard">
+                            <span class="anim__title">Кукла LOL</span>
+                        </div>
+                    </div>
                 </div>
-            </section>
+
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev anim-button-prev"></div>
+                <div class="swiper-button-next anim-button-next"></div>
+
+
+            </div>
+            <button class="btn anim-btn">Смотреть больше</button>
+
+        </section>
+
+        <div class="container">
 
 
 
@@ -242,46 +251,200 @@
 
             <section class="gallery">
                 <h2 class="title gallery__title">Наши праздники</h2>
+
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+
+                            <img class="gallery-slide__photo" src="img/gallery/@novikovegor_photo=0009.jpg" alt="">
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <img class="gallery-slide__photo" src="img/gallery/Photo-0064.jpg" alt="">
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <img class="gallery-slide__photo" src="img/gallery/Photo-0145.jpg" alt="">
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <img class="gallery-slide__photo" src="img/gallery/Photo-0495.jpg" alt="">
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <img class="gallery-slide__photo" src="img/gallery/00190jpg.JPG" alt="">
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <img class="gallery-slide__photo" src="img/gallery/4N3A0866.JPG" alt="">
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <img class="gallery-slide__photo" src="img/gallery/Photo-0145.jpg" alt="">
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <img class="gallery-slide__photo" src="img/gallery/Photo-0495.jpg" alt="">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-pag">
+
+                    <div class="swiper-button-prev gallery-button-prev"></div>
+                    <div class="swiper-pagination gallery-pagination"></div>
+                    <div class="swiper-button-next gallery-button-next"></div>
+
+                </div>
             </section>
 
-            <section class="accordion">
-                <h2 class="title accordion__title">Часто задаваемые вопросы</h2>
-                <ul class="accordion__list" id="accordion">
-                    <li class="accordion__item">
-                        Вопрос 1
-                        <a href="#" class="link accordion-item__link">
-                            <button class="btn accordion-item__btn" aria-label="Показать больше"></button>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe vel voluptatibus unde iusto dolorum velit porro reprehenderit labore dolor? Quaerat molestiae quae accusamus esse dolore excepturi molestias laborum expedita illo.</p>
-                    </li>
-                    <li class="accordion__item">
-                        <a href="#" class="link accordion-item__link">
-                            <button class="btn accordion-item__btn"></button>
-                        </a>
-                    </li>
-                    <li class="accordion__item">
-                        <a href="#" class="link accordion-item__link">
-                            <button class="btn accordion-item__btn"></button>
-                        </a>
-                    </li>
-                    <li class="accordion__item">
-                        <a href="#" class="link accordion-item__link">
-                            
-                            <button class="btn accordion-item__btn"></button>
-                        </a>
-                    </li>
-                    <li class="accordion__item">
-                        <a href="#" class="link accordion-item__link">
-                            <button class="btn accordion-item__btn"></button>
-                        </a>
-                    </li>
-                    <li class="accordion__item">
-                        <a href="#" class="link accordion-item__link">
-                            <button class="btn accordion-item__btn"></button>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+            <div class="about-shows">
+                <section class="accordion">
+                    <h2 class="title accordion__title">Часто задаваемые вопросы</h2>
+                    <ul class="list accordion__list" id="accordion">
+                        <li class="accordion__item">
+                            <a href="#" class="link accordion-item__link">
+                                Вопрос 1
+
+                                <button class="accordion-item__button" aria-label="Показать больше"></button>
+                            </a>
+                            <p class="accordion-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit
+                                anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </li>
+                        <li class="accordion__item">
+                            <a href="#" class="link accordion-item__link">
+                                Вопрос 2
+
+                                <button class="accordion-item__button" aria-label="Показать больше"></button>
+                            </a>
+                            <p class="accordion-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit
+                                anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </li>
+                        <li class="accordion__item">
+                            <a href="#" class="link accordion-item__link">
+                                Вопрос 3
+
+                                <button class="accordion-item__button" aria-label="Показать больше"></button>
+                            </a>
+                            <p class="accordion-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit
+                                anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </li>
+                        <li class="accordion__item">
+                            <a href="#" class="link accordion-item__link">
+                                Вопрос 4
+
+                                <button class="accordion-item__button" aria-label="Показать больше"></button>
+                            </a>
+                            <p class="accordion-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit
+                                anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </li>
+                        <li class="accordion__item">
+                            <a href="#" class="link accordion-item__link">
+                                Вопрос 5
+
+                                <button class="accordion-item__button" aria-label="Показать больше"></button>
+                            </a>
+                            <p class="accordion-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit
+                                anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </li>
+                        <li class="accordion__item">
+                            <a href="#" class="link accordion-item__link">
+                                Вопрос 6
+
+                                <button class="accordion-item__button" aria-label="Показать больше"></button>
+                            </a>
+                            <p class="accordion-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit
+                                anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="info">
+                    <div class="info__form"></div>
+                    <div class="info__contacts"></div>
+                </section>
+            </div>
 
 
         </div>
@@ -314,6 +477,22 @@
     </footer>
 
 
+
+    <div class="modal">
+        <div class="modal__dialog">
+            <button class="modal-x"></button>
+            <h2 class="modal__title">Напишите нам</h2>
+            <p class="modal__description">мы с вами свяжемся в ближайшее время</p>
+            <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="off" method="post"
+                class="modal__form">
+                <input required type="text" name="name" class="input modal-input" placeholder="Имя*">
+                <input required type="tel" name="tel" class="input modal-input" placeholder="Телефон*">
+                <!-- <textarea name="textarea" class="input modal__textarea" placeholder="Сообщение..."></textarea> -->
+                <button type="submit" class="btn modal-btn">Заказать</button>
+
+            </form>
+        </div>
+    </div>
 
 </body>
 
