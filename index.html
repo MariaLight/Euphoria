@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -147,6 +148,9 @@
                     <li class="show-item bubbles">
                         <span class="show-item__title">Шоу мыльных пузырей</span>
                     </li>
+                    <li class="show-item dogs">
+                        <span class="show-item__title">Шоу дрессированных собак</span>
+                    </li>
 
                 </ul>
 
@@ -238,7 +242,7 @@
                     <div class="about-us-member__description">
                         <p class="about-us-member__name">Анастасия Захаренко</p>
                         <ul class="about-us-member__list">
-                            <li class="about-us-member__item">Организатор мероприятий с опытом 3 года</li>
+                            <li class="about-us-member__item">Организатор мероприятий с опытом 8 лет</li>
                             <li class="about-us-member__item">Подберёт лучший вариант праздника именно для вас</li>
                         </ul>
                     </div>
@@ -249,7 +253,7 @@
                 </div>
             </section>
 
-            <section class="gallery">
+            <section class="gallery" id="photos">
                 <h2 class="title gallery__title">Наши праздники</h2>
 
                 <div class="swiper-container">
@@ -307,7 +311,7 @@
                 </div>
             </section>
 
-            <div class="about-shows">
+            <div class="about-shows" id="contacts">
                 <section class="accordion">
                     <h2 class="title accordion__title">Часто задаваемые вопросы</h2>
                     <ul class="list accordion__list" id="accordion">
@@ -441,15 +445,92 @@
                 </section>
 
                 <section class="info">
-                    <div class="info__form"></div>
-                    <div class="info__contacts"></div>
+                    <div class="info__form">
+                        <div class="info-form__content">
+                            <h2 class="title info-form__title">Напишите нам</h2>
+                            <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="off" method="post"
+                                class="info-form__form">
+                                <input required type="text" name="name" class="input info-input" placeholder="Имя*">
+                                <input required type="tel" name="tel" class="input info-input" placeholder="Телефон*">
+                                <textarea name="textarea" class="input info-input info-textarea" placeholder="Сообщение..."></textarea>
+                                <button type="submit" class="btn info-btn">Заказать</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="info__contacts">
+                        <div class="info-contacts__content">
+                            <h2 class="title info-contacts__title">Контакты</h2>
+                            <address class="contacts">
+                                <a href="tel:+" class="link contacts__tel">+7 (999) 999-99-99</a>
+                                <a href="mailto:" class="link contacts__mail">euphoria@example.ru</a>
+                            </address>
+                            <div class="line"></div>
+
+
+                        </div>
+
+                    </div>
                 </section>
             </div>
 
 
+
+            <section class="feedback" id="feedback">
+                <h2 class="title feedback__title">Отзывы</h2>
+
+                <div class="feedback-container">
+                    <div class="feedback-wrapper">
+                        <div class="feedback-slide pink">
+                            <p class="feedback__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                laborum saepe earum eius omnis, necessitatibus error, temporibus suscipit quod quia
+                                dolores consequuntur beatae reiciendis a, fugiat iste nam minima distinctio.</p>
+                        </div>
+                        <div class="feedback-slide">
+                            <p class="feedback__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                laborum saepe earum eius omnis, necessitatibus error, temporibus suscipit quod quia
+                                dolores consequuntur beatae reiciendis a, fugiat iste nam minima distinctio.</p>
+                        </div>
+                        <div class="feedback-slide pink">
+                            <p class="feedback__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                laborum saepe earum eius omnis, necessitatibus error, temporibus suscipit quod quia
+                                dolores consequuntur beatae reiciendis a, fugiat iste nam minima distinctio.</p>
+                        </div>
+                        <div class="feedback-slide">
+                            <p class="feedback__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                laborum saepe earum eius omnis, necessitatibus error, temporibus suscipit quod quia
+                                dolores consequuntur beatae reiciendis a, fugiat iste nam minima distinctio.</p>
+                        </div>
+                        <div class="feedback-slide pink">
+                            <p class="feedback__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                laborum saepe earum eius omnis, necessitatibus error, temporibus suscipit quod quia
+                                dolores consequuntur beatae reiciendis a, fugiat iste nam minima distinctio.</p>
+                        </div>
+                        <div class="feedback-slide">
+                            <p class="feedback__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                laborum saepe earum eius omnis, necessitatibus error, temporibus suscipit quod quia
+                                dolores consequuntur beatae reiciendis a, fugiat iste nam minima distinctio.</p>
+                        </div>
+                        <div class="feedback-slide pink">
+                            <p class="feedback__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                laborum saepe earum eius omnis, necessitatibus error, temporibus suscipit quod quia
+                                dolores consequuntur beatae reiciendis a, fugiat iste nam minima distinctio.</p>
+                        </div>
+                        <div class="feedback-slide">
+                            <p class="feedback__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                laborum saepe earum eius omnis, necessitatibus error, temporibus suscipit quod quia
+                                dolores consequuntur beatae reiciendis a, fugiat iste nam minima distinctio.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev feedback-button-prev"></div>
+                    <div class="swiper-button-next feedback-button-next"></div>
+
+                </div>
+            </section>
+
         </div>
-
-
 
 
 
@@ -493,6 +574,8 @@
             </form>
         </div>
     </div>
+
+
 
 </body>
 

@@ -10,10 +10,22 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: '.anim-button-prev',
     },
 
-    slidesPerView: 5,
     watchOverflow: true,
     spaceBetween: 60,
     centeredSlides: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1
+      },
+      1380: {
+        slidesPerView: 5,
+        spaceBetween: 40
+      },
+      1750: {
+        slidesPerView: 5,
+        spaceBetween: 50
+      }
+    }
   });
   $(function () {
     $("#accordion").accordion(
@@ -59,6 +71,21 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
     slidesPerView: 2.3,
+    watchOverflow: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+  });
+  let feedbackSwiper = new Swiper('.feedback-container', {
+    slideClass: 'feedback-slide',
+    wrapperClass: 'feedback-wrapper',
+    direction: 'horizontal',
+    loop: true,
+    navigation: {
+      nextEl: '.feedback-button-next',
+      prevEl: '.feedback-button-prev',
+    },
+
+    slidesPerView: 4.2,
     watchOverflow: true,
     spaceBetween: 30,
     centeredSlides: true,
