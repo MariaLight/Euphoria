@@ -28,7 +28,7 @@ $mail->addAddress('mdlight@mail.ru');     // Кому будет уходить 
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Заявка с тестового сайта';
+$mail->Subject = 'Заявка с сайта';
 $mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone;
 $mail->AltBody = '';
 
