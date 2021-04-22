@@ -1,5 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  const header = document.querySelector('.header');
+  const banner = document.querySelector('.banner');
+  const headerHeight = header.offsetHeight;
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY;
+    if (scrollDistance > lastScrollTop) {
+      header.classList.remove('header--fixed');
+      banner.style.marginTop = null;
+
+    }
+    else {
+
+      header.classList.add('header--fixed');
+      banner.style.marginTop = `${headerHeight}px`;
+    }
+
+    if (scrollDistance === 0){
+      header.classList.remove('header--fixed');
+      banner.style.marginTop = null;
+    }
+    lastScrollTop = scrollDistance;
+  })
+
+
+
   let animSwiper = new Swiper('.anim-container', {
     slideClass: 'anim-slide',
     wrapperClass: 'anim-wrapper',
@@ -27,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+
+
   $(function () {
     $("#accordion").accordion(
       {
@@ -48,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
       for (let j = 0; j < i; ++j) {
         accordionBtns[j].classList.remove('up');
       }
-      for (let j = i+1; j < accordionLinks.length; ++j) {
+      for (let j = i + 1; j < accordionLinks.length; ++j) {
         accordionBtns[j].classList.remove('up');
       }
       accordionBtns[i].classList.toggle('up');
@@ -94,10 +123,10 @@ document.addEventListener('DOMContentLoaded', function () {
   let modalForm = document.querySelector('.modal');
   let modalBtn = document.querySelector('#banner-btn');
   let modalX = document.querySelector('.modal-x');
-  modalBtn.addEventListener('click', function(){
+  modalBtn.addEventListener('click', function () {
     modalForm.classList.add('modal--open');
   })
-  modalX.addEventListener('click', function(){
+  modalX.addEventListener('click', function () {
     modalForm.classList.remove('modal--open');
   }
   )
