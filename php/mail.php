@@ -29,7 +29,7 @@ $mail->addAddress('mdlight@mail.ru');     // Кому будет уходить 
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Заявка с тестового сайта';
-$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email;
+$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone;
 $mail->AltBody = '';
 
 if(!$mail->send()) {
