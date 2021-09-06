@@ -28,9 +28,13 @@
             <a href="/" class="link header-logo">
                 <img class="img header-logo__img" src="img/header/logo.png" alt="Эйфория">
             </a>
+            <button class="burger">
+                <img class="burger-img" src="img/burger.svg" alt="Меню" aria-label="Открыть меню">
+                <img class="burger-img-x" src="img/close.svg" alt="Закрыть меню" aria-label="Закрыть меню">
+            </button>
 
-            <nav class="header-nav">
-                <ul class="list header-list">
+            <nav class="header-nav menu">
+                <ul class="list header-list menu__list">
                     <li class="header-item">
                         <a href="#about-us" class="link header-link">О нас</a>
                     </li>
@@ -151,6 +155,9 @@
                     <li class="show-item dogs">
                         <span class="show-item__title">Шоу дрессированных собак</span>
                     </li>
+                    <li class="show-item neon last">
+                        <span class="show-item__title">Неоновое шоу</span>
+                    </li>
 
                 </ul>
 
@@ -228,7 +235,7 @@
 
                 <div class="about-us__member">
                     <img src="img/about-us/ap.png" alt="" class="about-us_img">
-                    <div class="ball-blue"></div>
+                    <div class=" ball ball-blue"></div>
                     <div class="about-us-member__description">
                         <p class="about-us-member__name">Анастасия Пандова</p>
                         <ul class="about-us-member__list">
@@ -239,6 +246,7 @@
                     </div>
                 </div>
                 <div class="about-us__member second">
+                    <img src="img/about-us/az.png" alt="" class="about-us_img img-second">
                     <div class="about-us-member__description">
                         <p class="about-us-member__name">Анастасия Захаренко</p>
                         <ul class="about-us-member__list">
@@ -246,8 +254,7 @@
                             <li class="about-us-member__item">Подберёт лучший вариант праздника именно для вас</li>
                         </ul>
                     </div>
-                    <img src="img/about-us/az.png" alt="" class="about-us_img img-second">
-                    <div class="ball-pink"></div>
+                    <div class="ball ball-pink"></div>
 
 
                 </div>
@@ -466,7 +473,8 @@
                             <h2 class="title info-contacts__title">Контакты</h2>
                             <address class="contacts">
                                 <a href="tel:+79282967276" class="link contacts__tel">+7 (928) 296-72-76</a>
-                                <a href="mailto:euphoria.event2120@gmail.com" class="link contacts__mail">euphoria.event2120@gmail.com</a>
+                                <a href="mailto:euphoria.event2120@gmail.com"
+                                    class="link contacts__mail">euphoria.event2120@gmail.com</a>
                             </address>
                             <div class="line"></div>
                             <span class="contacts__time">График работы менеджера (телефон и WhatsApp): <br> 10:00 -
@@ -570,8 +578,7 @@
             <button class="modal-x"></button>
             <h2 class="modal__title">Напишите нам</h2>
             <p class="modal__description">мы с вами свяжемся в ближайшее время</p>
-            <form action="php/mail.php" autocomplete="off" method="post"
-                class="modal__form">
+            <form action="php/mail.php" autocomplete="off" method="post" class="modal__form">
                 <input required type="text" name="name" class="input modal-input" placeholder="Имя*">
                 <input required type="tel" name="tel" class="input modal-input" placeholder="Телефон*">
                 <!-- <textarea name="textarea" class="input modal__textarea" placeholder="Сообщение..."></textarea> -->

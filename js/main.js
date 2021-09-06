@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const headerHeight = header.offsetHeight;
   let lastScrollTop = 0;
 
+
   window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
     if (scrollDistance > lastScrollTop) {
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       banner.style.marginTop = `${headerHeight}px`;
     }
 
-    if (scrollDistance === 0){
+    if (scrollDistance === 0) {
       header.classList.remove('header--fixed');
       banner.style.marginTop = null;
     }
@@ -42,7 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
     centeredSlides: true,
     breakpoints: {
       320: {
-        slidesPerView: 1
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 3
       },
       1380: {
         slidesPerView: 5,
@@ -98,11 +102,26 @@ document.addEventListener('DOMContentLoaded', function () {
       el: '.gallery-pagination',
       type: 'fraction',
     },
-
-    slidesPerView: 2.3,
     watchOverflow: true,
     spaceBetween: 30,
     centeredSlides: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1.1,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 1.7,
+      },
+      1245: {
+        slidesPerView: 2,
+      },
+      1430: {
+        slidesPerView: 2.3,
+
+      }
+    },
+
   });
   let feedbackSwiper = new Swiper('.feedback-container', {
     slideClass: 'feedback-slide',
@@ -113,8 +132,23 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: '.feedback-button-next',
       prevEl: '.feedback-button-prev',
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 50,
+        watchOverflow: 0,
+      },
+      1024: {
+        slidesPerView: 3.5,
+      },
+      1245: {
+        slidesPerView: 3.8,
+      },
+      1430: {
+        slidesPerView: 4.2,
 
-    slidesPerView: 4.2,
+      }
+    },
     watchOverflow: true,
     spaceBetween: 30,
     centeredSlides: true,
@@ -130,5 +164,16 @@ document.addEventListener('DOMContentLoaded', function () {
     modalForm.classList.remove('modal--open');
   }
   )
+
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+
+  burger.addEventListener('click', function () {
+    menu.classList.toggle('is-active');
+    document.querySelector('.header-list').classList.toggle('container');
+    document.querySelector('.burger-img-x').classList.toggle('is-open');
+    document.querySelector('.burger-img').classList.toggle('closed');
+
+  })
 
 })
