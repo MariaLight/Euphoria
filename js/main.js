@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     centeredSlides: true,
     breakpoints: {
       320: {
-        slidesPerView: 2
+        slidesPerView: 1.8
       },
       1024: {
         slidesPerView: 3
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: {
       320: {
         slidesPerView: 1.1,
-        spaceBetween: 40,
+        spaceBetween: 20,
       },
       1024: {
         slidesPerView: 1.7,
