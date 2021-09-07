@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
     centeredSlides: true,
   });
 
-  let modalForm = document.querySelector('.modal');
+  let modalForm = document.querySelector('.modal-form');
   let modalBtn = document.querySelector('#banner-btn');
   let modalX = document.querySelector('.modal-x');
   modalBtn.addEventListener('click', function () {
@@ -162,6 +162,19 @@ document.addEventListener('DOMContentLoaded', function () {
   })
   modalX.addEventListener('click', function () {
     modalForm.classList.remove('modal--open');
+  }
+  )
+  let modalShow = document.querySelector('.modal-show');
+  let modalShowX = document.querySelector('.modal-show-x');
+
+  let modalShowBtns = document.querySelectorAll('.show-item');
+  for (let i = 0; i<modalShowBtns.length; ++i){
+    modalShowBtns[i].addEventListener('click', function () {
+      modalShow.classList.add('modal--open');
+    })
+  }
+  modalShowX.addEventListener('click', function () {
+    modalShow.classList.remove('modal--open');
   }
   )
 
