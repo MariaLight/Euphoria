@@ -1197,7 +1197,7 @@ textarea {
         transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
         padding-top: 15px;
         background-color: var(--bg);
-        margin-top: 100px;
+        margin-top: 60px;
     }
     .menu__list {
         align-items: start;
@@ -1408,9 +1408,6 @@ textarea {
     }
     .modal-btn {
         padding: 10px 21px;
-    }
-    .menu {
-        margin-top: 60px;
     }
     .banner {
         padding: 50px 0;

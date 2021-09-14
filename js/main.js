@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
 
   const header = document.querySelector('.header');
   const banner = document.querySelector('.banner');
@@ -178,8 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   )
 
-  const burger = document.querySelector('.burger');
-  const menu = document.querySelector('.menu');
+  
 
   burger.addEventListener('click', function () {
     menu.classList.toggle('is-active');
