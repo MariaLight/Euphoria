@@ -31,10 +31,10 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'Заявка с сайта';
 $mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone;
 $mail->AltBody = '';
-
-if(!$mail->send()) {
-    echo 'Error';
-} else {
-    header('location: thank-you.html');
-}
+header('location: thank-you.html');
+// if(!$mail->send()) {
+//     echo 'Error';
+// } else {
+//     header('location: thank-you.html');
+// }
 ?>
