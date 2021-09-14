@@ -954,17 +954,17 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 34px 0;
+    padding: 15px 0;
 }
 
 .footer-logo {
     background: #fff;
-    width: 400px;
-    margin-left: 20px;
+    width: 250px;
+    margin-left: 15px;
 }
 
 .footer-logo__img {
-    width: 400px;
+    width: 250px;
 }
 
 .social-media__list {
@@ -973,13 +973,13 @@ textarea {
 }
 
 .social-media__item {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     margin-right: 50px;
 }
 
 .social-media__link {
-    padding: 35px;
+    padding: 25px;
 }
 
 .whatsapp {
