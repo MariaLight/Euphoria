@@ -553,6 +553,32 @@ textarea {
     margin-bottom: 70px;
 }
 
+.about-us-numbers__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.about-us-numbers__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-us-numbers__number {
+    font-size: 96px;
+    line-height: 117px;
+}
+
+.about-us-numbers__description {
+    font-weight: 300;
+    width: 80%;
+}
+
 .about-us__member {
     display: flex;
     align-items: center;
@@ -1082,9 +1108,11 @@ textarea {
     position: absolute;
     right: 40px;
 }
+
 .modal-show__dialog {
     background-color: #fff;
 }
+
 .modal-show-x {
     cursor: pointer;
     background-image: url(../img/close.svg);
@@ -1115,6 +1143,10 @@ textarea {
 .burger-img-x {
     display: none;
     width: 25px;
+}
+
+.sort {
+    background-color: var(--blue);
 }
 
 @media (max-width: 1410px) {
@@ -1288,6 +1320,9 @@ textarea {
     .about-us-member__name {
         text-align: center;
     }
+    .about-us-numbers__list {
+        flex-direction: column;
+    }
     .ball-blue {
         background: var(--blue);
         left: 250px;
@@ -1395,6 +1430,7 @@ textarea {
         right: 20px;
     }
 }
+
 @media (max-width: 480px) {
     .more__item {
         margin-right: 0px;
